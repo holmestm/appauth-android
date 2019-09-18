@@ -63,13 +63,13 @@
         To the list of attributes on the activity element.
         -->
         <activity android:name="net.openid.appauth.RedirectUriReceiverActivity">
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:scheme="https"
-                  android:host="appauth.demo-app.io"
-                  android:path="/oauth2redirect"/>
+                  android:host="opnap.eu-west-2.elasticbeanstalk.com"
+                  android:path="/oidc/oauth-validate.php"/>
             </intent-filter>
         </activity>
     </application>
