@@ -68,7 +68,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:scheme="https"
-                  android:host="opnap.eu-west-2.elasticbeanstalk.com"
+                  android:host="opnap.gravitaz.co.uk"
                   android:path="/oidc/oauth-validate.php"/>
             </intent-filter>
         </activity>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
  * Copyright 2015 The AppAuth for Android Authors. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
@@ -15,22 +14,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.openid.appauth">
 
-  <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
-  <application>
-    <activity android:name=".AuthorizationManagementActivity"
-      android:exported="false"
-      android:theme="@android:style/Theme.Translucent.NoTitleBar"
-      android:launchMode="singleTask" />
+    <application>
+        <activity
+            android:name=".AuthorizationManagementActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:launchMode="singleTask" />
 
-    <activity android:name=".RedirectUriReceiverActivity" android:exported="true">
-      <intent-filter>
-        <action android:name="android.intent.action.VIEW"/>
-        <category android:name="android.intent.category.DEFAULT"/>
-        <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="${appAuthRedirectScheme}"/>
-      </intent-filter>
-    </activity>
-  </application>
+        <activity
+            android:name=".RedirectUriReceiverActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${appAuthRedirectScheme}" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="opnap.eu-west-2.elasticbeanstalk.com"
+                    android:pathPattern="/oidc/oauth-validate.php" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
