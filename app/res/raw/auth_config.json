@@ -1,10 +1,8 @@
 {
-  "client_id": "h8L7m5kwQMB4b5taPvMYhlDK",
+  "client_id": "txLT1xNyH_4XccoeWYcTGyc8",
   "redirect_uri": "https://opnap.gravitaz.co.uk/oidc/oauth-validate.php",
   "authorization_scope": "openid email profile",
-  "discovery_uri": "http://opnap.gravitaz.co.uk/.well-known/openid-configuration",
-  "authorization_endpoint_uri":
-  "https://fidm.eu1.gigya.com/oidc/op/v1.0/3_1P2DV2VJMA_9HuJ7UWPR-IpsC6aCAio3knEz0tloRrmggSIX3wLzRCcl_oTXpcPb/authorize",
+  "discovery_uri": "https://oauth.gravitaz.co.uk/.well-known/openid-configuration",
   "registration_endpoint_uri": "",
-  "https_required": false
+  "https_required": true
 }
